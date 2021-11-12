@@ -1,2 +1,2 @@
 # Form_PHP
-Xampp em formulário web.
+Projeto de PHP para mostrar dados cadastrados em formulário.
