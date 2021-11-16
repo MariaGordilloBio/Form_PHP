@@ -1,29 +1,48 @@
 <?php
 
-//$nome = (isset($_POST["nome"]));
-
-//$email = (isset($_POST["email"]));
+$nome = $_POST["nome"];
+$email = ($_POST["email"]);
 
 echo "<h2>Seus dados cadastrados</h2>";
 echo "<br>";
 echo "<br>";
 
-if((strlen($_POST["nome"]))<=2){
 
-    //validar se entrou sobrenome também
-    echo (" Preencha o nome com no mínimo 2 caracteres." . "<br> <br>");
-}else{
-    echo ("O nome cadastrado foi: <br>" . $_POST["nome"] . "<br> <br>" );
-}
+if(isset($_POST["nome"])){
+
+    if((strlen($nome)<=2)){
+
+        echo (" Preencha o nome com no mínimo 2 caracteres." . "<br>");
+
+        echo "<br>";
+    }else{
+        $nomecompleto = explode(" ", $nome);
+        
+        echo ("O nome cadastrado foi: <br>" . $nomecompleto[0] . "<br>" );
+
+        echo "<br>";
+
+        if (count($nomecompleto) <= 1) {
+            echo ("Você não cadastrou um sobrenome.");
+
+            echo "<br>";
+        }else{
+            echo ("O sobrenome cadastrado foi: <br>" . end($nomecompleto));
+
+            echo "<br>";
+        }
+
+    }
 
 echo "<br>";
 
-if(filter_var ($_POST["email"], FILTER_VALIDATE_EMAIL)){
-    echo("E-mail válido. O email cadastrado foi: <br>" . $_POST["email"] . "<br> <br>");
-}else{
-    echo("E-mail inválido.");
+if(isset($_POST["email"])){
+
+    if(filter_var ($email, FILTER_VALIDATE_EMAIL)){
+        echo("E-mail válido. O email cadastrado foi: <br>" . $email . "<br> <br>");
+    }else{
+        echo("E-mail inválido.");
+    }
+    
 }
-
-echo "<br>";
-
-
+}

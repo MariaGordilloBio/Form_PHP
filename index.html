@@ -10,6 +10,8 @@
     
     <meta name= "viewport" content = "width=device-width, initial-scale=1" > 
 
+    <link rel="stylesheet" href="style.css"> 
+
     <title>Página de Cadastro</title> 
 
     <script src="./script.js"></script> 
@@ -27,11 +29,11 @@
 
             <form name= "formulário" action= "form.php" method= "post" id= "formulário"> 
         
-                <input type= "text" placeholder= "nome" id="nome" name= "nome"> 
+                <input type= "text" placeholder= "Nome Completo" id="nome" required name= "nome"> 
 
                 <br><br>
 
-                <input type= "text" placeholder= "email" id="email" name= "email" onblur="emailValidation(formulário.email)"> 
+                <input type= "text" placeholder= "E-mail" id="email" required name= "email" onblur="emailValidation(formulário.email)"> 
                 
                 <br><br>
 

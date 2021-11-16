@@ -15,7 +15,7 @@ let data = {
 }
 let convertData = JSON.stringify(data);
 
-localStorage.setItem("lead", convertData)
+localStorage.setItem("cadastro", convertData)
 
 })
 
@@ -34,10 +34,11 @@ function emailValidation(field) {
         (dominio.search(".")!=-1) &&
         (dominio.indexOf(".") >=1)&&
         (dominio.lastIndexOf(".") < dominio.length - 1)) {
-    //document.getElementById("msgemail").innerHTML="E-mail válido";
-    alert("Informações válidas! Clique para se cadastrar em nossa plataforma!");
+    alert("Clique para se cadastrar em nossa plataforma!");
     }
     else{
-    alert("E-mail inválido, por favor, verifique os dados cadastrados.");
+    alert("Por favor, verifique os dados cadastrados.");
     }
     }
+
+

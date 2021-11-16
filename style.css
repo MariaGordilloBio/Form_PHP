@@ -1,0 +1,120 @@
+/** remove pre definições do html **/ 
+
+*{ 
+
+    margin: 0; 
+
+    padding: 0; 
+
+} 
+
+/** efeito fluido **/ 
+
+html { 
+
+    scroll-behavior: smooth; 
+
+} 
+
+ 
+h2 {
+    color: rgb(255, 255, 255);
+
+    font-size: 2em;
+
+    text-align: center;
+
+    background-color: cornflowerblue ; 
+  }
+  
+h2:after, h2:before {
+    content: '';
+
+    display: block;
+
+    width: 80px;
+
+    height: 3px;
+
+    background: #71cccc;
+    
+    margin: 25px;
+
+}
+
+.section-container{ 
+
+        
+    background-color: cornflowerblue ; 
+
+    height: 150vh; 
+
+    width: 100%; 
+
+    display: flex; 
+
+    justify-content: center; 
+
+    align-items: center; 
+
+} 
+ 
+
+
+.card-container{ 
+
+    background: rgb(185, 202, 233); 
+
+    border-radius: 400px; 
+
+    padding: 50px; 
+
+    max-width: 450px; 
+
+} 
+
+ 
+ 
+
+input{ 
+
+    width: 100%; 
+
+    height: 60px; 
+
+    margin-bottom: 30px; 
+
+    text-align: center; 
+
+    border-radius: 50px; 
+
+    background: whitesmoke; 
+
+    color: rgb(212, 149, 66); 
+    
+    font-weight: bolder ;
+  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+} 
+
+form input[type="text"]:focus {
+    
+    background-color:rgb(23, 68, 90);
+    
+    border:1px solid #900;
+    
+    padding:7px;
+}
+
+ 
+ 
+
+form{ 
+
+    display: inline; 
+
+} 
+
+
+ 
